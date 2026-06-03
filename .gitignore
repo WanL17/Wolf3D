@@ -1,0 +1,11 @@
+wolf3d
+*.o
+a.out
+test*
+vgcore*
+*.txt
+src/*.o
+*~
+#*#
+*.tmp
+*.bmp

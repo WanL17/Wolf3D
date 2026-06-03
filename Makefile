@@ -25,6 +25,7 @@ SRC	=	src/main.c					\
 		src/menu/menu.c					\
 		src/menu/blur_shader.c					\
 		src/menu/create_specific_menus.c		\
+		src/menu/create_specific_menus2.c		\
 		src/menu/menu_rendering.c			\
 		src/menu/create_title.c			\
 		src/menu/resolution_nav.c			\

@@ -340,8 +340,7 @@ bool create_weapons(player_t *player, game_t *game);
 void use_weapons(game_t *game, player_t *pl);
 void weapon_sprite_anim(player_t *pl);
 void detect_an_enemy_knife(player_t *pl, entity_t *entities, weapon_t *weapon);
-void detect_an_enemy_gun(
-    game_t *game, player_t *pl, entity_t *entities, weapon_t *weapon);
+void detect_an_enemy_gun(player_t *pl, entity_t *entities, weapon_t *weapon);
 
 // Entities :
 int player_entity_collision(player_t *player, entity_t *entity);

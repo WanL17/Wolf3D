@@ -56,8 +56,8 @@ void render_menu(game_t *game, player_t *player)
     if (game->menu_index == PAUSE_WINDOW)
         sfRenderWindow_drawSprite(GAME_WIN, game->menu->blur[0], NULL);
     scale_mouse(game, &mouse_loc);
-    if (game->menu_index != PAUSE_WINDOW 
-        && game->menu_index != GAME_OVER_WINDOW)
+    if (game->menu_index != PAUSE_WINDOW &&
+        game->menu_index != GAME_OVER_WINDOW)
         sfRenderWindow_drawSprite(GAME_WIN, game->menu->background, NULL);
     update_text(game, player);
     event_hover_buttons(game, &mouse_loc);

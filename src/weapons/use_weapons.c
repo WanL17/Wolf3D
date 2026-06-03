@@ -44,8 +44,7 @@ static int collision_bullet(
     return FALSE;
 }
 
-void detect_an_enemy_gun(
-    game_t *game, player_t *pl, entity_t *entities, weapon_t *weapon)
+void detect_an_enemy_gun(player_t *pl, entity_t *entities, weapon_t *weapon)
 {
     sfVector2f bullet = {0};
 
@@ -88,7 +87,7 @@ void use_weapons(game_t *game, player_t *pl)
         if (pl->cur_weapon == KNIFE_WEAPON) {
             detect_an_enemy_knife(pl, game->entities, weapon);
         } else {
-            detect_an_enemy_gun(game, pl, game->entities, weapon);
+            detect_an_enemy_gun(pl, game->entities, weapon);
         }
     }
 }

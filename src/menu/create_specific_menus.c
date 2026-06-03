@@ -146,9 +146,3 @@ void create_pause_menu(game_t *game)
         quit_button);
     check_buttons_and_texts(game->menu, 0, 3);
 }
-
-void create_game_over_menu(game_t *game)
-{
-    (void)game;
-    return;
-}

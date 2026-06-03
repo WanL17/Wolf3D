@@ -19,6 +19,16 @@ static void reset_particle_postition(particule_t *particles, int index)
     }
 }
 
+static void draw_a_particle(game_t *game, particule_t *particles, int i)
+{
+    sfRectangleShape_setFillColor(particles->pixel, sfBlue);
+    sfRenderWindow_drawRectangleShape(GAME_WIN, particles->pixel, NULL);
+    reset_particle_postition(particles, i);
+    sfRectangleShape_setPosition(particles->pixel,
+        (sfVector2f){particles->pos[i].x, particles->pos[i].y + 10});
+    particles->pos[i].y += 10;
+}
+
 void draw_particles(game_t *game, particule_t *particles)
 {
     sfTime time = sfClock_getElapsedTime(particles->clock);
@@ -32,18 +42,12 @@ void draw_particles(game_t *game, particule_t *particles)
     }
     for (int i = 0; i < PARTICULE_NB; i++) {
         if (particles->first_iteration) {
-            particles->pos[i] = (sfVector2f){rand() % 600 + 100, rand() % 50};
-            sfRectangleShape_setSize(particles->pixel, (sfVector2f){1, 4});
+            particles->pos[i] = (sfVector2f){rand() % 800, rand() % 600};
+            sfRectangleShape_setSize(particles->pixel, (sfVector2f){3, 10});
             sfRectangleShape_setPosition(particles->pixel, particles->pos[i]);
         }
         if (particles->pos[i].x != 0.0 && particles->pos[i].y != 0.0) {
-            printf("oui\n");
-            sfRectangleShape_setFillColor(particles->pixel, sfBlue);
-            sfRenderWindow_drawRectangleShape(GAME_WIN, particles->pixel, NULL);
-            reset_particle_postition(particles, i);
-            sfRectangleShape_setPosition(particles->pixel,
-                (sfVector2f){particles->pos[i].x, particles->pos[i].y + 0.1});
-            particles->pos[i].y += 0.1;
+            draw_a_particle(game, particles, i);
         }
     }
     particles->start = false;

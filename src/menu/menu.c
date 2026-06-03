@@ -138,7 +138,7 @@ menu_t *create_menu(void)
         destroy_menu(menu);
         return NULL;
     }
-    menu->res_index = 1;
+    menu->res_index = 0;
     menu->fps_index = 2;
     menu->timer = sfClock_create();
     menu->font[0] = sfFont_createFromFile(EXPOSE_FONT);

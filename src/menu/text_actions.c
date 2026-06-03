@@ -31,11 +31,13 @@ void volume_text(game_t *game, player_t *player, text_t *text)
 
 void resolution_text(game_t *game, player_t *player, text_t *text)
 {
-    char str[10];
-    sfVector2u size = sfRenderWindow_getSize(GAME_WIN);
+    char str[12];
 
     (void)player;
-    snprintf(str, 10, "%ux%u", size.x, size.y);
+    if (game->menu->res_index == 0)
+        snprintf(str, 9, "Windowed");
+    else
+        snprintf(str, 11, "Fullscreen");
     sfText_setString(text->text, str);
 }
 

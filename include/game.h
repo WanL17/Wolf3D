@@ -57,7 +57,7 @@
 // PLAYER MACROS :
     #define MAX_HEALTH 100
     #define PLAYER_BUBBLE 10
-    #define WALK_SPD 3
+    #define WALK_SPD 1
     #define BOBBING_SPEED 0.2
     #define BOBBING_INTENSITY 10
     #define CAM_SENSIBILITY 0.001

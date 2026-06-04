@@ -1,6 +1,12 @@
 # Wolf3D
 
-This is the final project of Software Engineering in the first year at **EPITECH** that I had to do with 2 other classmates. So as you may have guessed the main goal was to recreate the game Wolfenstein3D from 1992 still in C but with csfml, the c version of sfml.
+This is the final project of Software Engineering in the first year at **EPITECH** that I had to do with 2 other classmates.
+
+So as you may have guessed the main goal was to recreate the game Wolfenstein3D from 1992 still in C but with the help of csfml, the c version of sfml.
+
+We recreated the hole game from the beginning by implementing the technique of **raycast** like the real Wolfenstein3D.
+
+The game has multiple weapons and enemies. As the time pass by in the game it will get harder and harder. Try to survive as long an=s you can and get the best score.
 
 We tried to mix the universe of Persona 5 into Wolfenstein3D and this is the result.
 

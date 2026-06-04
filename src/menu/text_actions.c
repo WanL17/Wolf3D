@@ -34,9 +34,9 @@ void resolution_text(game_t *game, player_t *player, text_t *text)
     char str[12];
 
     (void)player;
-    if (game->menu->res_index == 0)
+    if (game->menu->res_index == WINDOWED)
         snprintf(str, 9, "Windowed");
-    else
+    else if (game->menu->res_index == FULLSCREEN)
         snprintf(str, 11, "Fullscreen");
     sfText_setString(text->text, str);
 }

@@ -125,6 +125,8 @@ static bool create_menu_images(menu_t *menu)
     if (!menu->game_over || !menu->t_game_over)
         return false;
     sfSprite_setTexture(menu->game_over, menu->t_game_over, sfTrue);
+    sfSprite_setScale(menu->game_over, (sfVector2f){2, 2});
+    sfSprite_setPosition(menu->game_over, (sfVector2f){100, 100});
     return true;
 }
 

@@ -19,7 +19,7 @@ void left_res_button(game_t *game, player_t *player, button_t *button)
     sfVideoMode mode = {800, 600, 32};
 
     (void)player;
-    if (game->menu->res_index - 1 >= 0) {
+    if (game->menu->res_index - 1 >= WINDOWED) {
         game->menu->res_index--;
         sfRenderWindow_destroy(game->window);
         game->window = sfRenderWindow_create(mode, "Wolf3D", sfDefaultStyle,
@@ -33,7 +33,7 @@ void right_res_button(game_t *game, player_t *player, button_t *button)
     sfVideoMode mode = {800, 600, 32};
 
     (void)player;
-    if (game->menu->res_index + 1 <= 2) {
+    if (game->menu->res_index + 1 <= FULLSCREEN) {
         game->menu->res_index++;
         sfRenderWindow_destroy(game->window);
         game->window = sfRenderWindow_create(mode, "Wolf3D", sfFullscreen,

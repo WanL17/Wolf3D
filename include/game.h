@@ -80,11 +80,16 @@
     #define ENEMY_BUBBLE 50
     #define ENTITY_SPRITE_SHEET "assets/images/mutant_sprites.png"
 
-//Forward Declaration:
-struct menu_s;
+// RESOLUTION MACROS :
+    #define WINDOWED 0
+    #define FULLSCREEN 1
 
 /////////////////////////////////// STRUCTURES ////////////////////////////////
 
+//Forward Declaration:
+struct menu_s;
+
+// STRUCTURE FOR THE PARTICULES :
 typedef struct particule_s {
     sfRectangleShape *pixel;
     sfClock *clock;

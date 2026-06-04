@@ -76,6 +76,8 @@ static void check_event(game_t *game)
 static void check_menu_event(game_t *game, player_t *player,
     sfVector2i *mouse_loc)
 {
+    if (game->menu_index == GAME_OVER_WINDOW)
+        return;
     if (sfKeyboard_isKeyPressed(sfKeyEnter) && game->menu_index == INTRO_MENU){
         switch_menu(game, MAIN_MENU);
         return;
@@ -102,6 +104,8 @@ static void check_game_event(game_t *game, player_t *player)
         player->hp = MAX_HEALTH;
         return;
     }
+    if (game->menu_index == GAME_OVER_WINDOW)
+        return;
     switch (game->event.type) {
         case sfEvtMouseButtonPressed:
             use_weapons(game, player);

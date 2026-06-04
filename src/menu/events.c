@@ -41,7 +41,7 @@ void event_pressed_buttons(game_t *game, sfVector2i *mouse_loc)
     sfFloatRect button_rect;
     int i = 0;
 
-    while (game->menu->buttons[i]){
+    while (game->menu->buttons[i]) {
         button_rect = sfSprite_getGlobalBounds(game->menu->buttons[i]->sprite);
         if (sfFloatRect_contains(&button_rect, mouse_loc->x, mouse_loc->y))
             sfSprite_setColor(game->menu->buttons[i]->sprite, sfRed);

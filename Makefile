@@ -5,7 +5,7 @@
 ## Makefile
 ##
 
-CC	=	epiclang
+CC	=	clang
 
 SRC	=	src/main.c					\
 		src/init.c					\
@@ -52,7 +52,7 @@ SRC	=	src/main.c					\
 		src/weapons/use_weapons.c		\
 		src/weapons/weapons_animation.c
 
-CFLAGS  = -I./include -Wextra -Wall -pedantic -g3
+CFLAGS  = -I./include -Wextra -Wall -pedantic
 
 LDFLAGS = -L$(HOME)/.local/csfml2/lib -L$(HOME)/.local/sfml2/lib \
            -lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-audio \

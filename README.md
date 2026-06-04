@@ -1,4 +1,4 @@
-# Wolf3D
+# Wolf3D - The recreation of Wolfenstein3D in CSFML
 
 This is the final project of Software Engineering in the first year at **EPITECH** that I had to do with 2 other classmates.
 

@@ -1,6 +1,6 @@
 # Wolf3D
 
-This is the project wolf3d that I had to do with 2 other classmates. So as you may have guessed the main goal was to recreate the game Wolfenstein3D from 1992 still in C but with csfml, the c version of sfml.
+This is the final project of Software Engineering in the first year at EPITECH that I had to do with 2 other classmates. So as you may have guessed the main goal was to recreate the game Wolfenstein3D from 1992 still in C but with csfml, the c version of sfml.
 
 ## Install
 You'll have to clone this repo or download the zip of the repo and dezip it.

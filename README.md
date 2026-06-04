@@ -25,5 +25,9 @@ Then you can start the game :
 ```
 ./wolf3d
 ```
+You can clean evrything by entering this command :
+```
+make fclean
+```
 
 Here you go enjoy playing my game !
